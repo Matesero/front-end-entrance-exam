@@ -1,0 +1,53 @@
+.module{
+    border-radius: 50px;
+    margin-left: 50px;
+}
+
+#photo-module{
+    width: 600px;
+    height: 600px;
+    background-color: white;
+}
+
+#name-module{
+    width: 600px;
+    height: 600px;
+    background-color: white;
+}
+
+#language-module{
+    width: 1081px;
+    height: 600px;
+    background-color: white;
+}
+
+#experience-module{
+    width: 1731px;
+    height: 1500px;
+    background-color: #ffffff;
+}
+
+#tools-module{
+    width: 600px;
+    height: 1500px;
+    background-color: #ffffff;
+}
+
+#education-module{
+    width: 1207px;
+    height: 1207px;
+    background-color: #ffffff;
+}
+
+#interest-module{
+    width: 1124px;
+    height: 757px;
+    background-color: #ffffff;
+}
+
+#mail-module{
+    width: 1124px;
+    height: 400px;
+    margin-top: 50px;
+    background-color: #ffffff;
+}

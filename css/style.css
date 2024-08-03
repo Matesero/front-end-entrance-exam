@@ -94,3 +94,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+#resume-block {
+  height: 3507px;
+  width: 2481px;
+  scale: 50%;
+  position: absolute;
+  background-color: #535bf2;
+  border-radius: 50px;
+}
+
+.row{
+  flex-direction: row;
+  display: flex;
+  margin-top: 50px;
+}
+
+.column{
+  flex-direction: column;
+}
