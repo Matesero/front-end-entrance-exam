@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/avatar.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/name.css">
     <link rel="stylesheet" href="css/languages.css">
     <link rel="stylesheet" href="css/experience.css">
@@ -13,10 +13,18 @@
     <link rel="stylesheet" href="css/education.css">
     <link rel="stylesheet" href="css/interests.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/editor.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite App</title>
 </head>
 <body>
+<div class="editor hidden">
+    <div class="editor-content">
+        <textarea id="input-text" placeholder="Введите новый текст" style="resize: vertical"></textarea>
+        <button id="save-button">Сохранить</button>
+        <button id="close-button">Закрыть</button>
+    </div>
+</div>
 <div id="resume">
     <div id="resume-container">
         <div class="box" id="avatar"></div>
@@ -30,48 +38,43 @@
         </div>
 
         <div class="box" id="languages-box">
-            <h1>Languages</h1>
+            <h1 id="box-name-1">Languages</h1>
             <div class="column" id="languages-list">
-                <div class="language-level" id="first-language">
-                    <p class="language-name" id="first-language-name">English</p>
-                    <div class="progress-bar" id="first-language-progress"></div>
+                <div class="language-level" id="language-1">
+                    <p class="language-name" id="language-name-1">English</p>
+                    <div class="progress-bar" id="language-progress-1"></div>
                 </div>
-                <div class="language-level" id="second-language">
-                    <p class="language-name" id="second-language-name">Malayalam</p>
-                    <div class="progress-bar" id="second-language-progress"></div>
+                <div class="language-level" id="language-2">
+                    <p class="language-name" id="language-name-2">Malayalam</p>
+                    <div class="progress-bar" id="language-progress-2"></div>
                 </div>
-                <div class="language-level" id="third-language">
-                    <p class="language-name" id="third-language-name">Hindi</p>
-                    <div class="progress-bar" id="third-language-progress"></div>
+                <div class="language-level" id="language-3">
+                    <p class="language-name" id="language-name-3">Hindi</p>
+                    <div class="progress-bar" id="language-progress-3"></div>
                 </div>
             </div>
         </div>
 
         <div class="box" id="experience-box">
-            <h1>Experience</h1>
+            <h1 id="box-name-2">Experience</h1>
             <div class="column" id="job-list">
                 <div class="job" style="background:#28D979">
                     <div class="job-top-bar">
                         <p class="job-date" id="date-1" style="color:#FFFFFF">Jun. 2023 - Present</p>
-                        <p class="exp-tag">most recent</p>
+                        <p id="experience-tag">most recent</p>
                     </div>
                     <div class="job-content">
                         <div class="job-info">
                             <h2 id="role-name-1" style="color:#FFFFFF">Marketing Manager</h2>
                             <div class="about-job" id="about-job-1">
                                 <p class="company-name" id="company-name-1" style="color:#FFFFFF">Pankayam</p>
-                                <p class="delimiter" style="color:#FFFFFF">|</p>
+                                <p class="delimiter" id="delimiter-1" style="color:#FFFFFF">|</p>
                                 <p class="position" id="position-1" style="color:#FFFFFF">Full-time</p>
                             </div>
                         </div>
                         <div class="featured-points">
-                            <p class="points" id="point-1" style="color:#FFFFFF">
-                                Strategy development and planning of campaigns that promote the business and generate
-                                genuine traffic
-                            </p>
-                            <p class="points" id="point-2" style="color:#FFFFFF">
-                                SEO Content Creation for Blogs, Website, Social media
-                            </p>
+                            <p class="points" id="point-1" style="color:#FFFFFF">Strategy development and planning of campaigns that promote the business and generate genuine traffic</p>
+                            <p class="points" id="point-2" style="color:#FFFFFF">SEO Content Creation for Blogs, Website, Social media</p>
                         </div>
                     </div>
                 </div>
@@ -84,21 +87,12 @@
                             <h2 id="role-name-2">Graphic / Web designer</h2>
                             <div class="about-job" id="about-job-2">
                                 <p class="company-name" id="company-name-3">Freelance</p>
-                                <p class="delimiter"></p>
-                                <p class="position" id="position-3"></p>
                             </div>
                         </div>
                         <div class="featured-points">
-                            <p class="points" id="point-3">
-                                Development of internal projects from scratch, product design of brands
-                            </p>
-                            <p class="points" id="point-4">
-                                Landing page, webapps and hybrid apps
-                            </p>
-                            <p class="points" id="point-5">
-                                Coordinating with outside agencies, art services, web designer, marketing, printers, and
-                                colleagues as necessary.
-                            </p>
+                            <p class="points" id="point-3">Development of internal projects from scratch, product design of brands</p>
+                            <p class="points" id="point-4">Landing page, webapps and hybrid apps</p>
+                            <p class="points" id="point-5">Coordinating with outside agencies, art services, web designer, marketing, printers, and colleagues as necessary.</p>
                         </div>
                     </div>
                 </div>
@@ -111,20 +105,14 @@
                             <h2 id="role-name-3">Legal Assistant</h2>
                             <div class="about-job" id="about-job-3">
                                 <p class="company-name" id="company-name-2">Law Firm</p>
-                                <p class="delimiter">|</p>
+                                <p class="delimiter" id="delimiter-2">|</p>
                                 <p class="position" id="position-2">Intern</p>
                             </div>
                         </div>
                         <div class="featured-points">
-                            <p class="points" id="point-6">
-                                Provide administrative support to lawyer and enhance office effectiveness
-                            </p>
-                            <p class="points" id="point-7">
-                                Handle communication with clients, witnesses etc.
-                            </p>
-                            <p class="points" id="point-8">
-                                Prepare case briefs and summarize depositions, interrogatories and testimony
-                            </p>
+                            <p class="points" id="point-6">Provide administrative support to lawyer and enhance office effectiveness</p>
+                            <p class="points" id="point-7">Handle communication with clients, witnesses etc.</p>
+                            <p class="points" id="point-8">Prepare case briefs and summarize depositions, interrogatories and testimony</p>
                         </div>
                     </div>
                 </div>
@@ -132,7 +120,7 @@
         </div>
 
         <div class="box" id="tools-box">
-            <h1>Tools</h1>
+            <h1 id="box-name-3">Tools</h1>
             <div class="frame">
                 <div class="type-tool">
                     <p class="tool-tag" id="tool-tag-1">design</p>
@@ -166,7 +154,7 @@
             </div>
         </div>
         <div class="box" id="education-box">
-            <h1>Education</h1>
+            <h1 id="box-name-4">Education</h1>
             <div id="education-content">
                 <div class="education-column">
                     <div class="education" id="last-education" style="background: #28D979">
@@ -177,14 +165,14 @@
                         <div class="education-info">
                             <h2 id="education-name-last" style="color:#FFFFFF">UI/UX</h2>
                             <div class="education-tags">
-                                <p class="education-tag" style="color:#FFFFFF">#UX</p>
-                                <p class="education-tag" style="color:#FFFFFF">#UI</p>
-                                <p class="education-tag" style="color:#FFFFFF">#research</p>
-                                <p class="education-tag" style="color:#FFFFFF">#DesignSystem</p>
-                                <p class="education-tag" style="color:#FFFFFF">#Ui</p>
-                                <p class="education-tag" style="color:#FFFFFF">#wireframing</p>
-                                <p class="education-tag" style="color:#FFFFFF">#figma</p>
-                                <p class="education-tag" style="color:#FFFFFF">#Ux</p>
+                                <p class="education-hashtag" id="hashtag-1" style="color:#FFFFFF">#UX</p>
+                                <p class="education-hashtag" id="hashtag-2" style="color:#FFFFFF">#UI</p>
+                                <p class="education-hashtag" id="hashtag-3" style="color:#FFFFFF">#research</p>
+                                <p class="education-hashtag" id="hashtag-4" style="color:#FFFFFF">#DesignSystem</p>
+                                <p class="education-hashtag" id="hashtag-5" style="color:#FFFFFF">#Ui</p>
+                                <p class="education-hashtag" id="hashtag-6" style="color:#FFFFFF">#wireframing</p>
+                                <p class="education-hashtag" id="hashtag-7" style="color:#FFFFFF">#figma</p>
+                                <p class="education-hashtag" id="hashtag-8" style="color:#FFFFFF">#Ux</p>
                             </div>
                         </div>
                         <p class="school-name" id="school-name-last" style="color:#FFFFFF">Coursera</p>
@@ -196,10 +184,10 @@
                         <div class="education-info">
                             <h2 id="education-name-3">Graphic design</h2>
                             <div class="education-tags">
-                                <p class="education-tag">#branding</p>
-                                <p class="education-tag">#web</p>
-                                <p class="education-tag">#illustration</p>
-                                <p class="education-tag">#adobe</p>
+                                <p class="education-hashtag" id="hashtag-9">#branding</p>
+                                <p class="education-hashtag" id="hashtag-10">#web</p>
+                                <p class="education-hashtag" id="hashtag-11">#illustration</p>
+                                <p class="education-hashtag" id="hashtag-12">#adobe</p>
                             </div>
                         </div>
                         <p class="school-name" id="school-name-2">Coursera</p>
@@ -213,13 +201,13 @@
                         <div class="education-info">
                             <h2 id="education-name-1">Law</h2>
                             <div class="education-tags">
-                                <p class="education-tag">#law</p>
-                                <p class="education-tag">#legalStudies</p>
-                                <p class="education-tag">#contracts</p>
-                                <p class="education-tag">#internationalLaws</p>
+                                <p class="education-hashtag" id="hashtag-13">#law</p>
+                                <p class="education-hashtag" id="hashtag-14">#legalStudies</p>
+                                <p class="education-hashtag" id="hashtag-15">#contracts</p>
+                                <p class="education-hashtag" id="hashtag-16">#internationalLaws</p>
                             </div>
                         </div>
-                        <p class="school-name">University of Kerala</p>
+                        <p class="school-name" id="school-name-1">University of Kerala</p>
                     </div>
                 </div>
             </div>
@@ -227,7 +215,7 @@
 
         <div class="column" style="gap: 20px">
             <div class="box" id="interest-box">
-                <h1>Interests</h1>
+                <h1 id="box-name-5">Interests</h1>
                 <div id="interests">
                     <p class="interest" id="interest-1">branding</p>
                     <p class="interest" id="interest-2">design</p>
