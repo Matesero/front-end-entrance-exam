@@ -8,14 +8,21 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+#resume{
+    min-height: 842px;
+    max-width: 595px;
+    margin: 25px auto;
+    background-color: white;
+}
 
 #resume-container {
-    height: 842px;
-    width: 595px;
+    max-width: 555px;
+    display: flex;
+    flex-wrap: wrap;
     padding-left: 20px;
-    padding-top: 5px;
+    padding-top: 15px;
+    gap: 20px;
     overflow: hidden;
-    background-color: white;
 }
 
 .box{
@@ -25,7 +32,6 @@
     overflow: hidden;
     box-sizing: border-box;
     padding: 12px;
-    margin: 10px;
 }
 
 .row{

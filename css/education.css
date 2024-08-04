@@ -29,14 +29,13 @@
     flex-direction: column;
     border-radius: 10px;
     padding: 8px;
-    gap: 8px;
+    gap: 6.5px;
     background-color: #FFFFFF;
 }
 
 #education-tag {
     width: 11px;
     height: 10px;
-    background-image: url("../assets/images/heart.png");
     background-size: cover;
 }
 

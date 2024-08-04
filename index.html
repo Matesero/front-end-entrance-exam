@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/avatar.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,190 +13,246 @@
     <link rel="stylesheet" href="css/education.css">
     <link rel="stylesheet" href="css/interests.css">
     <link rel="stylesheet" href="css/contact.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Vite App</title>
-  </head>
-  <body>
-    <div id="app"></div>
+</head>
+<body>
+<div id="resume">
     <div id="resume-container">
-      <div class="row" id="first-row" >
-        <div class="box" id="avatar" ></div>
+        <div class="box" id="avatar"></div>
 
         <div class="box" id="name-box">
-          <p id="greeting">Hello</p>
-          <div class="column" id="info">
-            <p id="name">Your name</p>
-            <p id="profession">Your profession</p>
-          </div>
+            <p id="greeting">Hello 👋🏻 I’m</p>
+            <div class="column" id="info">
+                <p id="name">Karthik SR</p>
+                <p id="profession">UX/UI Designer</p>
+            </div>
         </div>
 
         <div class="box" id="languages-box">
-          <h1>Languages</h1>
-          <div class="column" id="languages-list">
-            <div class="language-level" id="first-language">
-              <p class="language-name" id="first-language-name">Name</p>
-              <div class="progress-bar" id="first-language-progress"></div>
+            <h1>Languages</h1>
+            <div class="column" id="languages-list">
+                <div class="language-level" id="first-language">
+                    <p class="language-name" id="first-language-name">English</p>
+                    <div class="progress-bar" id="first-language-progress"></div>
+                </div>
+                <div class="language-level" id="second-language">
+                    <p class="language-name" id="second-language-name">Malayalam</p>
+                    <div class="progress-bar" id="second-language-progress"></div>
+                </div>
+                <div class="language-level" id="third-language">
+                    <p class="language-name" id="third-language-name">Hindi</p>
+                    <div class="progress-bar" id="third-language-progress"></div>
+                </div>
             </div>
-            <div class="language-level" id="second-language">
-              <p class="language-name" id="second-language-name">Name</p>
-              <div class="progress-bar" id="second-language-progress"></div>
-            </div>
-            <div class="language-level" id="third-language">
-              <p class="language-name" id="third-language-name">Name</p>
-              <div class="progress-bar" id="third-language-progress"></div>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <div class="row" id="second-row">
         <div class="box" id="experience-box">
-          <h1>Experience</h1>
-          <div class="column" id="job-list">
-            <div class="job" id="job-1">
-              <div class="job-top-bar" id="job-top-bar-1">
-                <p class="job-date" id="date-1">date - date</p>
-                <p class="exp-tag">tag</p>
-              </div>
-              <div class="job-content" id="content-1">
-                <div class="job-info" id="job-info-1">
-                  <h2 id="role-name-1">Role name 1</h2>
-                  <div class="about-job" id="about-job-1">
-                    <p class="company-name" id="company-name-1">company name</p>
-                    <p class="delimiter">|</p>
-                    <p class="position" id="position-1">position</p>
-                  </div>
+            <h1>Experience</h1>
+            <div class="column" id="job-list">
+                <div class="job" style="background:#28D979">
+                    <div class="job-top-bar">
+                        <p class="job-date" id="date-1" style="color:#FFFFFF">Jun. 2023 - Present</p>
+                        <p class="exp-tag">most recent</p>
+                    </div>
+                    <div class="job-content">
+                        <div class="job-info">
+                            <h2 id="role-name-1" style="color:#FFFFFF">Marketing Manager</h2>
+                            <div class="about-job" id="about-job-1">
+                                <p class="company-name" id="company-name-1" style="color:#FFFFFF">Pankayam</p>
+                                <p class="delimiter" style="color:#FFFFFF">|</p>
+                                <p class="position" id="position-1" style="color:#FFFFFF">Full-time</p>
+                            </div>
+                        </div>
+                        <div class="featured-points">
+                            <p class="points" id="point-1" style="color:#FFFFFF">
+                                Strategy development and planning of campaigns that promote the business and generate
+                                genuine traffic
+                            </p>
+                            <p class="points" id="point-2" style="color:#FFFFFF">
+                                SEO Content Creation for Blogs, Website, Social media
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="featured-points" id="featured-points-1">
-                  <p class="points" id="point-1">
-                    Point<br>
-                    Point<br>
-                    Point<br>
-                  </p>
+                <div class="job" id="job-2">
+                    <div class="job-top-bar">
+                        <p class="job-date" id="date-2">2017 - Present</p>
+                    </div>
+                    <div class="job-content">
+                        <div class="job-info">
+                            <h2 id="role-name-2">Graphic / Web designer</h2>
+                            <div class="about-job" id="about-job-2">
+                                <p class="company-name" id="company-name-3">Freelance</p>
+                                <p class="delimiter"></p>
+                                <p class="position" id="position-3"></p>
+                            </div>
+                        </div>
+                        <div class="featured-points">
+                            <p class="points" id="point-3">
+                                Development of internal projects from scratch, product design of brands
+                            </p>
+                            <p class="points" id="point-4">
+                                Landing page, webapps and hybrid apps
+                            </p>
+                            <p class="points" id="point-5">
+                                Coordinating with outside agencies, art services, web designer, marketing, printers, and
+                                colleagues as necessary.
+                            </p>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="job" id="job-3">
+                    <div class="job-top-bar">
+                        <p class="job-date" id="date-3">Sep. 2021 - Jun. 2023</p>
+                    </div>
+                    <div class="job-content">
+                        <div class="job-info">
+                            <h2 id="role-name-3">Legal Assistant</h2>
+                            <div class="about-job" id="about-job-3">
+                                <p class="company-name" id="company-name-2">Law Firm</p>
+                                <p class="delimiter">|</p>
+                                <p class="position" id="position-2">Intern</p>
+                            </div>
+                        </div>
+                        <div class="featured-points">
+                            <p class="points" id="point-6">
+                                Provide administrative support to lawyer and enhance office effectiveness
+                            </p>
+                            <p class="points" id="point-7">
+                                Handle communication with clients, witnesses etc.
+                            </p>
+                            <p class="points" id="point-8">
+                                Prepare case briefs and summarize depositions, interrogatories and testimony
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="job" id="job-2">
-              <div class="job-top-bar" id="job-top-bar-2">
-                <p class="job-date" id="date-2">date - date</p>
-                <p class="exp-tag">tag</p>
-              </div>
-              <div class="job-content" id="content-2">
-                <div class="job-info" id="job-info-2">
-                  <h2 id="role-name-2">Role name 2</h2>
-                  <div class="about-job" id="about-job-2">
-                    <p class="company-name" id="company-name-2">company name</p>
-                    <p class="delimiter">|</p>
-                    <p class="position" id="position-2">position</p>
-                  </div>
-                </div>
-                <div class="featured-points" id="featured-points-2">
-                  <p class="points" id="point-2">
-                    Point<br>Point<br>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div class="box" id="tools-box">
-          <h1>Tools</h1>
-          <div class="frame">
-            <div class="tools-list" id="tools-list-1">
-              <p class="tool-tag" id="tool-tag-1">design</p>
+            <h1>Tools</h1>
+            <div class="frame">
+                <div class="type-tool">
+                    <p class="tool-tag" id="tool-tag-1">design</p>
+                    <div class="tools-list">
+                        <img id="logo-figma" src="assets/images/figma.svg" alt="logo figma">
+                        <img id="logo-photoshop" src="assets/images/photoshop.svg" alt="logo photoshop">
+                        <img id="logo-illustrator" src="assets/images/illustrator.svg" alt="logo illustrator">
+                        <img id="logo-premiere" src="assets/images/premiere.svg" alt="logo premiere">
+                        <img id="logo-notion" src="assets/images/notion.svg" alt="logo notion">
+                        <img id="logo-meet" src="assets/images/meet.svg" alt="logo meet">
+                    </div>
+                </div>
+                <div class="type-tool">
+                    <p class="tool-tag" id="tool-tag-2">no-code</p>
+                    <div class="tools-list">
+                        <img id="logo-zapier" src="assets/images/zapier.svg" alt="logo zapier">
+                        <img id="logo-webflow" src="assets/images/webflow.svg" alt="logo webflow">
+                        <img id="logo-framer" src="assets/images/framer.svg" alt="logo framer">
+                        <img id="logo-wordpress" src="assets/images/wordpress.svg" alt="logo wordpress">
+                    </div>
+                </div>
+                <div class="type-tool">
+                    <p class="tool-tag" id="tool-tag-3">artoficial intelligence</p>
+                    <div class="tools-list">
+                        <img id="logo-chatGPT" src="assets/images/chatGPT.svg" alt="logo chatGPT">
+                        <img id="logo-copilot" src="assets/images/copilot.svg" alt="logo copilot">
+                        <img id="logo-midjourney" src="assets/images/midjourney.svg" alt="logo midjourney">
+                        <img id="empty" src="assets/images/empty.svg" alt="empty">
+                    </div>
+                </div>
             </div>
-            <div class="tools-list" id="tools-list-2">
-              <p class="tool-tag" id="tool-tag-2">no-code</p>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <div class="row" id="third-row">
         <div class="box" id="education-box">
-          <h1>Education</h1>
-          <div id="education-content">
-            <div class="education-column">
-              <div class="education" id="education-1">
-                <div class="education-top-bar" id="top-bar-education-1">
-                  <h2 id="education-date-1">2023</h2>
-                  <img id="education-tag" alt="">
+            <h1>Education</h1>
+            <div id="education-content">
+                <div class="education-column">
+                    <div class="education" id="last-education" style="background: #28D979">
+                        <div class="education-top-bar">
+                            <h2 id="education-date-last" style="color:#FFFFFF">2023</h2>
+                            <img id="education-tag" alt="heart" src="assets/images/heart.png">
+                        </div>
+                        <div class="education-info">
+                            <h2 id="education-name-last" style="color:#FFFFFF">UI/UX</h2>
+                            <div class="education-tags">
+                                <p class="education-tag" style="color:#FFFFFF">#UX</p>
+                                <p class="education-tag" style="color:#FFFFFF">#UI</p>
+                                <p class="education-tag" style="color:#FFFFFF">#research</p>
+                                <p class="education-tag" style="color:#FFFFFF">#DesignSystem</p>
+                                <p class="education-tag" style="color:#FFFFFF">#Ui</p>
+                                <p class="education-tag" style="color:#FFFFFF">#wireframing</p>
+                                <p class="education-tag" style="color:#FFFFFF">#figma</p>
+                                <p class="education-tag" style="color:#FFFFFF">#Ux</p>
+                            </div>
+                        </div>
+                        <p class="school-name" id="school-name-last" style="color:#FFFFFF">Coursera</p>
+                    </div>
+                    <div class="education" id="education-2">
+                        <div class="education-top-bar">
+                            <h2 id="education-date-3">2017</h2>
+                        </div>
+                        <div class="education-info">
+                            <h2 id="education-name-3">Graphic design</h2>
+                            <div class="education-tags">
+                                <p class="education-tag">#branding</p>
+                                <p class="education-tag">#web</p>
+                                <p class="education-tag">#illustration</p>
+                                <p class="education-tag">#adobe</p>
+                            </div>
+                        </div>
+                        <p class="school-name" id="school-name-2">Coursera</p>
+                    </div>
                 </div>
-                <div class="education-info" id="education-info-1">
-                  <h2 id="education-name-1">education name 1</h2>
-                  <div class="education-tags" id="education-tag-1">
-                    <p class="education-tag">#tag1</p>
-                    <p class="education-tag">#tag2</p>
-                    <p class="education-tag">#tag3</p>
-                    <p class="education-tag">#tag4</p>
-                    <p class="education-tag">#tag5</p>
-                  </div>
+                <div class="education-column">
+                    <div class="education" id="education-1">
+                        <div class="education-top-bar">
+                            <h2 id="education-date-1">2017 - 2022</h2>
+                        </div>
+                        <div class="education-info">
+                            <h2 id="education-name-1">Law</h2>
+                            <div class="education-tags">
+                                <p class="education-tag">#law</p>
+                                <p class="education-tag">#legalStudies</p>
+                                <p class="education-tag">#contracts</p>
+                                <p class="education-tag">#internationalLaws</p>
+                            </div>
+                        </div>
+                        <p class="school-name">University of Kerala</p>
+                    </div>
                 </div>
-                <p class="school-name">school name 1</p>
-              </div>
-              <div class="education" id="education-2">
-                <div class="education-top-bar" id="top-bar-education-2">
-                  <h2 id="education-date-2">2021</h2>
-                </div>
-                <div class="education-info" id="education-info-2">
-                  <h2 id="education-name-2">education name 2</h2>
-                  <div class="education-tags" id="education-tag-2">
-                    <p class="education-tag">#tag1</p>
-                    <p class="education-tag">#tag2</p>
-                    <p class="education-tag">#tag3</p>
-                    <p class="education-tag">#tag4</p>
-                  </div>
-                </div>
-                <p class="school-name">school name 2</p>
-              </div>
             </div>
-            <div class="education-column">
-              <div class="education" id="education-3">
-                <div class="education-top-bar" id="top-bar-education-3">
-                  <h2 id="education-date-3">2022</h2>
-                </div>
-                <div class="education-info" id="education-info-3">
-                  <h2 id="education-name-3">education name 2</h2>
-                  <div class="education-tags" id="education-tag-3">
-                    <p class="education-tag">#tag1</p>
-                    <p class="education-tag">#tag2</p>
-                    <p class="education-tag">#tag3</p>
-                    <p class="education-tag">#tag4</p>
-                  </div>
-                </div>
-                <p class="school-name">school name 2</p>
-              </div>
-            </div>
-          </div>
         </div>
 
-        <div class="column">
-          <div class="box" id="interest-box">
-            <h1>Interests</h1>
-            <div id="interests">
-              <p class="interest" id="interest-1">interest1</p>
-              <p class="interest" id="interest-2">interest2</p>
-              <p class="interest" id="interest-3">interest3</p>
-              <p class="interest" id="interest-4">interest4</p>
-              <p class="interest" id="interest-5">interest5</p>
-              <p class="interest" id="interest-6">interest6</p>
-              <p class="interest" id="interest-7">interest8</p>
-              <p class="interest" id="interest-8">interest7</p>
+        <div class="column" style="gap: 20px">
+            <div class="box" id="interest-box">
+                <h1>Interests</h1>
+                <div id="interests">
+                    <p class="interest" id="interest-1">branding</p>
+                    <p class="interest" id="interest-2">design</p>
+                    <p class="interest" id="interest-3">photography</p>
+                    <p class="interest" id="interest-4">artificial intelligence</p>
+                    <p class="interest" id="interest-5">illustration</p>
+                    <p class="interest" id="interest-6">typography</p>
+                    <p class="interest" id="interest-7">social networks</p>
+                    <p class="interest" id="interest-8">research</p>
+                    <p class="interest" id="interest-9">dron pilot</p>
+                    <p class="interest" id="interest-10">games</p>
+                </div>
             </div>
-          </div>
 
-          <div class="box" id="contact">
-            <div id="contact-title">
-              <p id="contact-title-text">Let's chat! I'm ready to work on exciting project</p>
+            <div class="box" id="contact">
+                <div id="contact-title">
+                    <p id="contact-title-text">Let's chat! I'm ready to work on exciting project</p>
+                </div>
+                <div id="mail">
+                    <p id="mail-text">srkarthik.designscape@gmail.com</p>
+                </div>
             </div>
-            <div id="mail">
-              <p id="mail-text">qwerty@mail.ru</p>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-    <script type="module" src="./js/main.js"></script>
-  </body>
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
 </html>
