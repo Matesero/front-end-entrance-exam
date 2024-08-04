@@ -3,35 +3,196 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/avatar.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/modules.css">
+    <link rel="stylesheet" href="css/name.css">
+    <link rel="stylesheet" href="css/languages.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <link rel="stylesheet" href="css/tools.css">
+    <link rel="stylesheet" href="css/education.css">
+    <link rel="stylesheet" href="css/interests.css">
+    <link rel="stylesheet" href="css/contact.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
     <div id="app"></div>
-    <div id="resume-block">
-      <div id="first-row" class="row">
-        <div id="photo-module" class="module">
-        </div>
-        <div id="name-module" class="module">
-        </div>
-        <div id="language-module" class="module">
-        </div>
-      </div>
-      <div id="second-row" class="row">
-        <div id="experience-module" class="module">
-        </div>
-        <div id="tools-module" class="module">
-        </div>
-      </div>
-      <div id="third-row" class="row">
-        <div id="education-module" class="module">
-        </div>
-        <div class="column">
-          <div id="interest-module" class="module">
+    <div id="resume-container">
+      <div class="row" id="first-row" >
+        <div class="box" id="avatar" ></div>
+
+        <div class="box" id="name-box">
+          <p id="greeting">Hello</p>
+          <div class="column" id="info">
+            <p id="name">Your name</p>
+            <p id="profession">Your profession</p>
           </div>
-          <div id="mail-module" class="module">
+        </div>
+
+        <div class="box" id="languages-box">
+          <h1>Languages</h1>
+          <div class="column" id="languages-list">
+            <div class="language-level" id="first-language">
+              <p class="language-name" id="first-language-name">Name</p>
+              <div class="progress-bar" id="first-language-progress"></div>
+            </div>
+            <div class="language-level" id="second-language">
+              <p class="language-name" id="second-language-name">Name</p>
+              <div class="progress-bar" id="second-language-progress"></div>
+            </div>
+            <div class="language-level" id="third-language">
+              <p class="language-name" id="third-language-name">Name</p>
+              <div class="progress-bar" id="third-language-progress"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="second-row">
+        <div class="box" id="experience-box">
+          <h1>Experience</h1>
+          <div class="column" id="job-list">
+            <div class="job" id="job-1">
+              <div class="job-top-bar" id="job-top-bar-1">
+                <p class="job-date" id="date-1">date - date</p>
+                <p class="exp-tag">tag</p>
+              </div>
+              <div class="job-content" id="content-1">
+                <div class="job-info" id="job-info-1">
+                  <h2 id="role-name-1">Role name 1</h2>
+                  <div class="about-job" id="about-job-1">
+                    <p class="company-name" id="company-name-1">company name</p>
+                    <p class="delimiter">|</p>
+                    <p class="position" id="position-1">position</p>
+                  </div>
+                </div>
+                <div class="featured-points" id="featured-points-1">
+                  <p class="points" id="point-1">
+                    Point<br>
+                    Point<br>
+                    Point<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="job" id="job-2">
+              <div class="job-top-bar" id="job-top-bar-2">
+                <p class="job-date" id="date-2">date - date</p>
+                <p class="exp-tag">tag</p>
+              </div>
+              <div class="job-content" id="content-2">
+                <div class="job-info" id="job-info-2">
+                  <h2 id="role-name-2">Role name 2</h2>
+                  <div class="about-job" id="about-job-2">
+                    <p class="company-name" id="company-name-2">company name</p>
+                    <p class="delimiter">|</p>
+                    <p class="position" id="position-2">position</p>
+                  </div>
+                </div>
+                <div class="featured-points" id="featured-points-2">
+                  <p class="points" id="point-2">
+                    Point<br>Point<br>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box" id="tools-box">
+          <h1>Tools</h1>
+          <div class="frame">
+            <div class="tools-list" id="tools-list-1">
+              <p class="tool-tag" id="tool-tag-1">design</p>
+            </div>
+            <div class="tools-list" id="tools-list-2">
+              <p class="tool-tag" id="tool-tag-2">no-code</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row" id="third-row">
+        <div class="box" id="education-box">
+          <h1>Education</h1>
+          <div id="education-content">
+            <div class="education-column">
+              <div class="education" id="education-1">
+                <div class="education-top-bar" id="top-bar-education-1">
+                  <h2 id="education-date-1">2023</h2>
+                  <img id="education-tag" alt="">
+                </div>
+                <div class="education-info" id="education-info-1">
+                  <h2 id="education-name-1">education name 1</h2>
+                  <div class="education-tags" id="education-tag-1">
+                    <p class="education-tag">#tag1</p>
+                    <p class="education-tag">#tag2</p>
+                    <p class="education-tag">#tag3</p>
+                    <p class="education-tag">#tag4</p>
+                    <p class="education-tag">#tag5</p>
+                  </div>
+                </div>
+                <p class="school-name">school name 1</p>
+              </div>
+              <div class="education" id="education-2">
+                <div class="education-top-bar" id="top-bar-education-2">
+                  <h2 id="education-date-2">2021</h2>
+                </div>
+                <div class="education-info" id="education-info-2">
+                  <h2 id="education-name-2">education name 2</h2>
+                  <div class="education-tags" id="education-tag-2">
+                    <p class="education-tag">#tag1</p>
+                    <p class="education-tag">#tag2</p>
+                    <p class="education-tag">#tag3</p>
+                    <p class="education-tag">#tag4</p>
+                  </div>
+                </div>
+                <p class="school-name">school name 2</p>
+              </div>
+            </div>
+            <div class="education-column">
+              <div class="education" id="education-3">
+                <div class="education-top-bar" id="top-bar-education-3">
+                  <h2 id="education-date-3">2022</h2>
+                </div>
+                <div class="education-info" id="education-info-3">
+                  <h2 id="education-name-3">education name 2</h2>
+                  <div class="education-tags" id="education-tag-3">
+                    <p class="education-tag">#tag1</p>
+                    <p class="education-tag">#tag2</p>
+                    <p class="education-tag">#tag3</p>
+                    <p class="education-tag">#tag4</p>
+                  </div>
+                </div>
+                <p class="school-name">school name 2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="box" id="interest-box">
+            <h1>Interests</h1>
+            <div id="interests">
+              <p class="interest" id="interest-1">interest1</p>
+              <p class="interest" id="interest-2">interest2</p>
+              <p class="interest" id="interest-3">interest3</p>
+              <p class="interest" id="interest-4">interest4</p>
+              <p class="interest" id="interest-5">interest5</p>
+              <p class="interest" id="interest-6">interest6</p>
+              <p class="interest" id="interest-7">interest8</p>
+              <p class="interest" id="interest-8">interest7</p>
+            </div>
+          </div>
+
+          <div class="box" id="contact">
+            <div id="contact-title">
+              <p id="contact-title-text">Let's chat! I'm ready to work on exciting project</p>
+            </div>
+            <div id="mail">
+              <p id="mail-text">qwerty@mail.ru</p>
+            </div>
           </div>
         </div>
       </div>

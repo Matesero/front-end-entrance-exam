@@ -1,0 +1,17 @@
+#contact{
+    width: 267px;
+    height: 92px;
+    background-color: #000000;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+#contact-title {
+    display: flex;
+    gap: 2px;
+}
+
+#mail {
+    display: flex;
+    gap: 8px;
+}

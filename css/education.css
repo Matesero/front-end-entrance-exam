@@ -1,0 +1,56 @@
+#education-box{
+    display: flex;
+    flex-direction: column;
+    width: 268px;
+    height: 289px;
+    gap: 16px;
+    background-color: #F0F0F0;
+}
+
+#education-content {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+.education-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 116px;
+    gap: 12px;
+}
+
+#second-column {
+    gap: 12px;
+}
+
+.education {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 8px;
+    gap: 8px;
+    background-color: #FFFFFF;
+}
+
+#education-tag {
+    width: 11px;
+    height: 10px;
+    background-image: url("../assets/images/heart.png");
+    background-size: cover;
+}
+
+.education-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.education-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+.education-top-bar {
+    display: flex;
+    justify-content: space-between;
+}

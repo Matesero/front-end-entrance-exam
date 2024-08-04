@@ -1,0 +1,10 @@
+#name-box{
+    width: 124px;
+    height: 124px;
+    justify-content: space-between;
+    background-color: #F0F0F0;
+}
+
+#info {
+    gap: 6px;
+}
