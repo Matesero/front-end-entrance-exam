@@ -1,7 +1,7 @@
 :root {
     color-scheme: light dark;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+    background-color: #ffffff;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -12,13 +12,15 @@
 #resume{
     min-height: 842px;
     max-width: 595px;
-    margin: 25px auto;
+    margin: 10px auto;
     background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 #resume-container {
     max-width: 555px;
     display: flex;
+    position: relative;
     flex-wrap: wrap;
     padding-left: 20px;
     padding-top: 15px;
@@ -43,4 +45,25 @@
 .column{
     display: flex;
     flex-direction: column;
+}
+
+#download-button{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    font-family: "Poppins-Medium", sans-serif;
+    font-size: 15px;
+    color: #FFFFFF;
+    background: #28d779;
+    border-radius: 10px;
+    padding: 1px 8px;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(40, 215, 121, 0.65);
+}
+
+#download-button:hover{
+    box-shadow: 0 0 15px rgba(40, 215, 121, 100%);
 }

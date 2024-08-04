@@ -18,15 +18,16 @@
     <title>Vite App</title>
 </head>
 <body>
-<div class="editor hidden">
-    <div class="editor-content">
-        <textarea id="input-text" placeholder="Введите новый текст" style="resize: vertical"></textarea>
-        <button id="save-button">Сохранить</button>
-        <button id="close-button">Закрыть</button>
-    </div>
-</div>
 <div id="resume">
     <div id="resume-container">
+        <div class="editor hidden">
+            <div class="editor-content">
+                <textarea id="input-text" placeholder="Введите новый текст" style="resize: vertical"></textarea>
+                <button id="save-button">Сохранить</button>
+                <button id="close-button">Закрыть</button>
+            </div>
+        </div>
+
         <div class="box" id="avatar"></div>
 
         <div class="box" id="name-box">
@@ -241,6 +242,7 @@
         </div>
     </div>
 </div>
+<button id="download-button">download</button>
 <script type="module" src="./js/main.js"></script>
 </body>
 </html>
