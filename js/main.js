@@ -65,7 +65,25 @@ document.getElementById("download-button").addEventListener('click', ()=> {
             putOnlyUsedFonts: true,
         });
         pdf.addImage(imgData, 'PNG', 0, 0, scaledWidth, scaledHeight);
-        pdf.save('my-pdf.pdf');
+        pdf.save('resume.pdf');
     })
 });
 
+
+const boxes = document.querySelectorAll('.box');
+boxes.forEach(box => {
+    box.addEventListener('click', function (event) {
+        const ripple = document.createElement('span');
+        const rect = box.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+
+        const x = event.clientX - rect.left - size / 2;
+        const y = event.clientY - rect.top - size / 2;
+
+        ripple.style.width = ripple.style.height = `${size}px`;
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.classList.add('ripple');
+        box.appendChild(ripple);
+    });
+});
