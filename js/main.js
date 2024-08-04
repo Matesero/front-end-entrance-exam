@@ -33,16 +33,39 @@ input.addEventListener('input', () =>{
 saveButton.addEventListener('click', () => {
     const targetElement = document.getElementById(editor.dataset.target);
 
-    console.log(input.value.length)
     if (input.value.length === 0){
         targetElement.textContent = " ";
     } else {
         targetElement.textContent = input.value;
     }
-    console.log(targetElement.textContent.length)
     editor.classList.add('hidden');
 });
 
 closeButton.addEventListener('click', () => {
     editor.classList.add('hidden');
 });
+
+document.getElementById("download-button").addEventListener('click', ()=> {
+    const resumeHTML = document.getElementById('resume')
+
+    html2canvas(resumeHTML, {scale: 4}).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const canvasWidth = canvas.width;
+        const canvasHeight = canvas.height;
+
+        const scale = Math.min(595 / canvasWidth, 842 / canvasHeight);
+        const scaledWidth = canvasWidth * scale;
+        const scaledHeight = canvasHeight * scale;
+        console.log(scale)
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF({
+            orientation: 'portrait',
+            unit: 'px',
+            format: [595, 842],
+            putOnlyUsedFonts: true,
+        });
+        pdf.addImage(imgData, 'PNG', 0, 0, scaledWidth, scaledHeight);
+        pdf.save('my-pdf.pdf');
+    })
+});
+
