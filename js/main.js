@@ -4,30 +4,48 @@ for (let text of document.querySelectorAll('h1')){
 }
 document.querySelectorAll('h1').forEach(text => {
     texts.push(text);
-})
+});
 document.querySelectorAll('h2').forEach(text => {
     texts.push(text);
-})
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTexts = JSON.parse(localStorage.getItem('texts')) || {};
+
+    for (const [id, value] of Object.entries(savedTexts) || {}) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.textContent = value;
+        }
+    }
+});
 
 const editor = document.querySelector('.editor');
 const input = document.getElementById('input-text');
 const saveButton = document.getElementById('save-button');
 const closeButton = document.getElementById('close-button');
-texts.forEach(editableText => {
-    editableText.addEventListener('click', () => {
+const downloadButton = document.getElementById("download-button");
+const resetButton = document.getElementById('reset-button');
+const boxes = document.querySelectorAll('.box');
+
+texts.forEach(text => {
+    text.addEventListener('click', () => {
+        if(!editor.classList.contains('hidden')){
+            return;
+        }
         editor.classList.remove('hidden');
-        input.value = editableText.textContent;
+        input.value = text.textContent;
         if (input.value === " "){
             input.value = "";
         }
         input.style.height = "30px";
-        editor.dataset.target = editableText.id;
+        editor.dataset.target = text.id;
     });
 });
 
 input.addEventListener('input', () =>{
-    const targetElement = document.getElementById(editor.dataset.target);
-    targetElement.textContent = input.value;
+    // const targetElement = document.getElementById(editor.dataset.target);
+    // targetElement.textContent = input.value;
 });
 
 saveButton.addEventListener('click', () => {
@@ -38,6 +56,11 @@ saveButton.addEventListener('click', () => {
     } else {
         targetElement.textContent = input.value;
     }
+
+    const savedTexts = JSON.parse(localStorage.getItem('texts')) || {};
+    savedTexts[editor.dataset.target] = targetElement.textContent;
+    localStorage.setItem('texts', JSON.stringify(savedTexts));
+
     editor.classList.add('hidden');
 });
 
@@ -45,8 +68,8 @@ closeButton.addEventListener('click', () => {
     editor.classList.add('hidden');
 });
 
-document.getElementById("download-button").addEventListener('click', ()=> {
-    const resumeHTML = document.getElementById('resume')
+downloadButton.addEventListener('click', ()=> {
+    const resumeHTML = document.getElementById('resume');
 
     html2canvas(resumeHTML, {scale: 4}).then(canvas => {
         const imgData = canvas.toDataURL('image/png');
@@ -56,7 +79,7 @@ document.getElementById("download-button").addEventListener('click', ()=> {
         const scale = Math.min(595 / canvasWidth, 842 / canvasHeight);
         const scaledWidth = canvasWidth * scale;
         const scaledHeight = canvasHeight * scale;
-        console.log(scale)
+
         const { jsPDF } = window.jspdf;
         const pdf = new jsPDF({
             orientation: 'portrait',
@@ -66,11 +89,14 @@ document.getElementById("download-button").addEventListener('click', ()=> {
         });
         pdf.addImage(imgData, 'PNG', 0, 0, scaledWidth, scaledHeight);
         pdf.save('resume.pdf');
-    })
+    });
 });
 
+resetButton.addEventListener('click', () =>{
+   localStorage.clear();
+   window.location.reload();
+});
 
-const boxes = document.querySelectorAll('.box');
 boxes.forEach(box => {
     box.addEventListener('click', function (event) {
         const ripple = document.createElement('span');
@@ -84,6 +110,11 @@ boxes.forEach(box => {
         ripple.style.left = `${x}px`;
         ripple.style.top = `${y}px`;
         ripple.classList.add('ripple');
+
+        ripple.addEventListener('animationend', () => {
+            ripple.remove();
+        });
+
         box.appendChild(ripple);
     });
 });

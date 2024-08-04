@@ -5,15 +5,6 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/text.css">
-    <link rel="stylesheet" href="css/avatar.css">
-    <link rel="stylesheet" href="css/name.css">
-    <link rel="stylesheet" href="css/languages.css">
-    <link rel="stylesheet" href="css/experience.css">
-    <link rel="stylesheet" href="css/tools.css">
-    <link rel="stylesheet" href="css/education.css">
-    <link rel="stylesheet" href="css/interests.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/editor.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -43,15 +34,15 @@
         <div class="box" id="languages-box">
             <h1 id="box-name-1">Languages</h1>
             <div class="column" id="languages-list">
-                <div class="language-level" id="language-1">
+                <div class="language-level row" id="language-1">
                     <p class="language-name" id="language-name-1">English</p>
                     <div class="progress-bar" id="language-progress-1"></div>
                 </div>
-                <div class="language-level" id="language-2">
+                <div class="language-level row" id="language-2">
                     <p class="language-name" id="language-name-2">Malayalam</p>
                     <div class="progress-bar" id="language-progress-2"></div>
                 </div>
-                <div class="language-level" id="language-3">
+                <div class="language-level row" id="language-3">
                     <p class="language-name" id="language-name-3">Hindi</p>
                     <div class="progress-bar" id="language-progress-3"></div>
                 </div>
@@ -61,7 +52,7 @@
         <div class="box" id="experience-box">
             <h1 id="box-name-2">Experience</h1>
             <div class="column" id="job-list">
-                <div class="job" style="background:#28D979">
+                <div class="job column" style="background:#28D979">
                     <div class="job-top-bar">
                         <p class="job-date" id="date-1" style="color:#FFFFFF">Jun. 2023 - Present</p>
                         <p id="experience-tag">most recent</p>
@@ -81,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="job" id="job-2">
+                <div class="job column" id="job-2">
                     <div class="job-top-bar">
                         <p class="job-date" id="date-2">2017 - Present</p>
                     </div>
@@ -99,7 +90,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="job" id="job-3">
+                <div class="job column" id="job-3">
                     <div class="job-top-bar">
                         <p class="job-date" id="date-3">Sep. 2021 - Jun. 2023</p>
                     </div>
@@ -124,7 +115,7 @@
 
         <div class="box" id="tools-box">
             <h1 id="box-name-3">Tools</h1>
-            <div class="frame">
+            <div class="frame column">
                 <div class="type-tool">
                     <p class="tool-tag" id="tool-tag-1">design</p>
                     <div class="tools-list">
@@ -244,7 +235,10 @@
         </div>
     </div>
 </div>
-<button id="download-button">download</button>
+<div class="row" id="row-buttons">
+    <button id="reset-button">reset</button>
+    <button id="download-button">download</button>
+</div>
 <script type="module" src="./js/main.js"></script>
 </body>
 </html>
