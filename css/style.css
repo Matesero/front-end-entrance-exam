@@ -316,7 +316,7 @@
     display: none;
 }
 
-.editor-content {
+.editor__content {
     text-align: center;
     display: flex;
     flex-wrap: wrap;
