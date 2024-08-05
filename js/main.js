@@ -40,6 +40,7 @@ texts.forEach(text => {
         }
         input.style.height = "30px";
         editor.dataset.target = text.id;
+        text.classList.add('blinking');
     });
 });
 
@@ -50,6 +51,7 @@ input.addEventListener('input', () =>{
 
 saveButton.addEventListener('click', () => {
     const targetElement = document.getElementById(editor.dataset.target);
+    targetElement.classList.remove('blinking')
 
     if (input.value.length === 0){
         targetElement.textContent = " ";
@@ -59,6 +61,10 @@ saveButton.addEventListener('click', () => {
 
     const savedTexts = JSON.parse(localStorage.getItem('texts')) || {};
     savedTexts[editor.dataset.target] = targetElement.textContent;
+    targetElement.classList.add('text-changing')
+    targetElement.addEventListener('animationend', () => {
+        targetElement.classList.remove('text-changing');
+    });
     localStorage.setItem('texts', JSON.stringify(savedTexts));
 
     editor.classList.add('hidden');
@@ -66,6 +72,8 @@ saveButton.addEventListener('click', () => {
 
 closeButton.addEventListener('click', () => {
     editor.classList.add('hidden');
+    const targetElement = document.getElementById(editor.dataset.target);
+    targetElement.classList.remove('blinking')
 });
 
 downloadButton.addEventListener('click', ()=> {

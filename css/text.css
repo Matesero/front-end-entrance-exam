@@ -159,3 +159,37 @@ h2 {
     line-height: 15px;
     color: #FFFFFF;
 }
+
+.blinking {
+    animation: blink 2s linear infinite;
+    scale: 1.025;
+    color: #de4a40;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.25;
+    }
+}
+
+.text-changing {
+    animation: scaling 2.1s linear;
+}
+
+@keyframes scaling {
+    0% {
+        scale: 1;
+    }
+    33% {
+        scale: 1.04;
+    }
+    66% {
+        scale: 0.97;
+    }
+    100% {
+        scale: 1;
+    }
+}
