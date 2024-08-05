@@ -22,7 +22,7 @@
 
 ### Итог
 
-Готовую работу можно посмотреть по клику [клик](https://matesero.github.io/front-end-entrance-exam/)
+Готовую работу можно посмотреть по [клику]](https://matesero.github.io/front-end-entrance-exam/).
 Все поставленные передо мной задачи были выполнены.
 
 ### Установка
