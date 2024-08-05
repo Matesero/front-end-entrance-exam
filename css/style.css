@@ -88,9 +88,21 @@
 .progress-bar {
     width: 168px;
     height: 11px;
+    background: transparent;
     border-radius: 3px;
     position: relative;
-    background: #28D979;
+    cursor: pointer;
+}
+
+.progress {
+    width: 50%;
+    height: 100%;
+    background-color: #28D979;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease;
 }
 
 #experience-box{

@@ -11,11 +11,19 @@ document.querySelectorAll('h2').forEach(text => {
 
 window.addEventListener('DOMContentLoaded', () => {
     const savedTexts = JSON.parse(localStorage.getItem('texts')) || {};
+    const savedProgress = JSON.parse(localStorage.getItem('progress')) || {};
 
     for (const [id, value] of Object.entries(savedTexts) || {}) {
         const element = document.getElementById(id);
         if (element) {
             element.textContent = value;
+        }
+    }
+
+    for (const [id, value] of Object.entries(savedProgress) || {}) {
+        const element = document.getElementById(id);
+        if (element) {
+            element.style.width = value;
         }
     }
 });
@@ -27,6 +35,7 @@ const closeButton = document.getElementById('close-button');
 const downloadButton = document.getElementById("download-button");
 const resetButton = document.getElementById('reset-button');
 const boxes = document.querySelectorAll('.box');
+const progressBars = Array.from(document.querySelectorAll('.progress-bar'));
 
 texts.forEach(text => {
     text.addEventListener('click', () => {
@@ -122,4 +131,16 @@ boxes.forEach(box => {
 
         box.appendChild(ripple);
     });
+});
+
+progressBars.forEach(progressBar => {
+   progressBar.addEventListener('mousedown', (event) => {
+       const rect = progressBar.getBoundingClientRect();
+       const x = event.clientX - rect.left;
+       const progress = progressBar.children[0];
+       progress.style.width = x + 'px';
+       const savedProgress = JSON.parse(localStorage.getItem('progress')) || {};
+       savedProgress[progress.id] = progress.style.width;
+       localStorage.setItem('progress', JSON.stringify(savedProgress));
+   });
 });
