@@ -61,12 +61,12 @@ h2 {
     color: #5C5C5C;
 }
 
-.language-name {
+.language__name {
     font-size: 10px;
     line-height: 10px;
 }
 
-.job-date {
+.job__date {
     font-size: 8px;
     line-height: 12px;
     text-align: center;
@@ -112,7 +112,7 @@ h2 {
     content: "•⠀";
 }
 
-.tool-tag {
+.tool__tag {
     font-size: 5px;
     line-height: 7px;
     padding: 2px 6px 2px 6px;
@@ -123,7 +123,7 @@ h2 {
     border-radius: 59px;
 }
 
-.education-hashtag {
+.hashtag {
     font-family: "Poppins-Regular", sans-serif;
     font-size: 8px;
     line-height: 12px;
@@ -147,13 +147,13 @@ h2 {
     border-radius: 40px;
 }
 
-#contact-title-text {
+#contact-title__text {
     font-size: 14px;
     line-height: 21px;
     color: #FFFFFF;
 }
 
-#mail-text {
+#mail__text {
     font-family: "Poppins-Regular", sans-serif;
     font-size: 10px;
     line-height: 15px;

@@ -33,20 +33,17 @@ texts.forEach(text => {
         if(!editor.classList.contains('hidden')){
             return;
         }
+
         editor.classList.remove('hidden');
+        input.style.height = "30px";
         input.value = text.textContent;
         if (input.value === " "){
             input.value = "";
         }
-        input.style.height = "30px";
+
         editor.dataset.target = text.id;
         text.classList.add('blinking');
     });
-});
-
-input.addEventListener('input', () =>{
-    // const targetElement = document.getElementById(editor.dataset.target);
-    // targetElement.textContent = input.value;
 });
 
 saveButton.addEventListener('click', () => {

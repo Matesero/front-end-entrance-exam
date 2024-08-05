@@ -12,9 +12,10 @@
 </head>
 <body>
 <div id="resume">
-    <div id="resume-container">
+    <div id="resume__container">
         <div class="editor hidden">
-            <div class="editor-content">
+            <div class="editor__content">
+                <label for="input-text"></label>
                 <textarea id="input-text" placeholder="Введите новый текст" style="resize: vertical"></textarea>
                 <button id="save-button">save</button>
                 <button id="close-button">close</button>
@@ -34,31 +35,31 @@
         <div class="box" id="languages-box">
             <h1 id="box-name-1">Languages</h1>
             <div class="column" id="languages-list">
-                <div class="language-level row" id="language-1">
-                    <p class="language-name" id="language-name-1">English</p>
-                    <div class="progress-bar" id="language-progress-1"></div>
+                <div class="language__level row" id="language-1">
+                    <p class="language__name" id="language__name-1">English</p>
+                    <div class="progress-bar" id="language__progress-1"></div>
                 </div>
-                <div class="language-level row" id="language-2">
-                    <p class="language-name" id="language-name-2">Malayalam</p>
-                    <div class="progress-bar" id="language-progress-2"></div>
+                <div class="language__level row" id="language-2">
+                    <p class="language__name" id="language__name-2">Malayalam</p>
+                    <div class="progress-bar" id="language__progress-2"></div>
                 </div>
-                <div class="language-level row" id="language-3">
-                    <p class="language-name" id="language-name-3">Hindi</p>
-                    <div class="progress-bar" id="language-progress-3"></div>
+                <div class="language__level row" id="language-3">
+                    <p class="language__name" id="language__name-3">Hindi</p>
+                    <div class="progress-bar" id="language__progress-3"></div>
                 </div>
             </div>
         </div>
 
         <div class="box" id="experience-box">
-            <h1 id="box-name-2">Experience</h1>
+            <h1 id="box__name-2">Experience</h1>
             <div class="column" id="job-list">
                 <div class="job column" style="background:#28D979">
-                    <div class="job-top-bar">
-                        <p class="job-date" id="date-1" style="color:#FFFFFF">Jun. 2023 - Present</p>
+                    <div class="job__top-bar">
+                        <p class="job__date" id="date-1" style="color:#FFFFFF">Jun. 2023 - Present</p>
                         <p id="experience-tag">most recent</p>
                     </div>
-                    <div class="job-content">
-                        <div class="job-info">
+                    <div class="job__content">
+                        <div class="job__info">
                             <h2 id="role-name-1" style="color:#FFFFFF">Marketing Manager</h2>
                             <div class="about-job" id="about-job-1">
                                 <p class="company-name" id="company-name-1" style="color:#FFFFFF">Pankayam</p>
@@ -73,11 +74,11 @@
                     </div>
                 </div>
                 <div class="job column" id="job-2">
-                    <div class="job-top-bar">
-                        <p class="job-date" id="date-2">2017 - Present</p>
+                    <div class="job__top-bar">
+                        <p class="job__date" id="date-2">2017 - Present</p>
                     </div>
-                    <div class="job-content">
-                        <div class="job-info">
+                    <div class="job__content">
+                        <div class="job__info">
                             <h2 id="role-name-2">Graphic / Web designer</h2>
                             <div class="about-job" id="about-job-2">
                                 <p class="company-name" id="company-name-3">Freelance</p>
@@ -91,11 +92,11 @@
                     </div>
                 </div>
                 <div class="job column" id="job-3">
-                    <div class="job-top-bar">
-                        <p class="job-date" id="date-3">Sep. 2021 - Jun. 2023</p>
+                    <div class="job__top-bar">
+                        <p class="job__date" id="date-3">Sep. 2021 - Jun. 2023</p>
                     </div>
-                    <div class="job-content">
-                        <div class="job-info">
+                    <div class="job__content">
+                        <div class="job__info">
                             <h2 id="role-name-3">Legal Assistant</h2>
                             <div class="about-job" id="about-job-3">
                                 <p class="company-name" id="company-name-2">Law Firm</p>
@@ -114,10 +115,10 @@
         </div>
 
         <div class="box" id="tools-box">
-            <h1 id="box-name-3">Tools</h1>
+            <h1 id="box__name-3">Tools</h1>
             <div class="frame column">
                 <div class="type-tool">
-                    <p class="tool-tag" id="tool-tag-1">design</p>
+                    <p class="tool__tag" id="tool__tag-1">design</p>
                     <div class="tools-list">
                         <img id="logo-figma" src="assets/images/figma.svg" alt="logo figma">
                         <img id="logo-photoshop" src="assets/images/photoshop.svg" alt="logo photoshop">
@@ -128,7 +129,7 @@
                     </div>
                 </div>
                 <div class="type-tool">
-                    <p class="tool-tag" id="tool-tag-2">no-code</p>
+                    <p class="tool__tag" id="tool__tag-2">no-code</p>
                     <div class="tools-list">
                         <img id="logo-zapier" src="assets/images/zapier.svg" alt="logo zapier">
                         <img id="logo-webflow" src="assets/images/webflow.svg" alt="logo webflow">
@@ -137,7 +138,7 @@
                     </div>
                 </div>
                 <div class="type-tool">
-                    <p class="tool-tag" id="tool-tag-3">artoficial intelligence</p>
+                    <p class="tool__tag" id="tool__tag-3">artoficial intelligence</p>
                     <div class="tools-list">
                         <img id="logo-chatGPT" src="assets/images/chatGPT.svg" alt="logo chatGPT">
                         <img id="logo-copilot" src="assets/images/copilot.svg" alt="logo copilot">
@@ -148,57 +149,57 @@
             </div>
         </div>
         <div class="box" id="education-box">
-            <h1 id="box-name-4">Education</h1>
-            <div id="education-content">
-                <div class="education-column">
+            <h1 id="box__name-4">Education</h1>
+            <div id="education__content">
+                <div class="education__column">
                     <div class="education" id="last-education" style="background: #28D979">
-                        <div class="education-top-bar">
-                            <h2 id="education-date-last" style="color:#FFFFFF">2023</h2>
+                        <div class="education__top-bar">
+                            <h2 id="education__date-last" style="color:#FFFFFF">2023</h2>
                             <img id="education-tag" alt="heart" src="assets/images/heart.png">
                         </div>
-                        <div class="education-info">
-                            <h2 id="education-name-last" style="color:#FFFFFF">UI/UX</h2>
-                            <div class="education-tags">
-                                <p class="education-hashtag" id="hashtag-1" style="color:#FFFFFF">#UX</p>
-                                <p class="education-hashtag" id="hashtag-2" style="color:#FFFFFF">#UI</p>
-                                <p class="education-hashtag" id="hashtag-3" style="color:#FFFFFF">#research</p>
-                                <p class="education-hashtag" id="hashtag-4" style="color:#FFFFFF">#DesignSystem</p>
-                                <p class="education-hashtag" id="hashtag-5" style="color:#FFFFFF">#Ui</p>
-                                <p class="education-hashtag" id="hashtag-6" style="color:#FFFFFF">#wireframing</p>
-                                <p class="education-hashtag" id="hashtag-7" style="color:#FFFFFF">#figma</p>
-                                <p class="education-hashtag" id="hashtag-8" style="color:#FFFFFF">#Ux</p>
+                        <div class="education__info">
+                            <h2 id="education__name-last" style="color:#FFFFFF">UI/UX</h2>
+                            <div class="education__hashtags">
+                                <p class="hashtag" id="hashtag-1" style="color:#FFFFFF">#UX</p>
+                                <p class="hashtag" id="hashtag-2" style="color:#FFFFFF">#UI</p>
+                                <p class="hashtag" id="hashtag-3" style="color:#FFFFFF">#research</p>
+                                <p class="hashtag" id="hashtag-4" style="color:#FFFFFF">#DesignSystem</p>
+                                <p class="hashtag" id="hashtag-5" style="color:#FFFFFF">#Ui</p>
+                                <p class="hashtag" id="hashtag-6" style="color:#FFFFFF">#wireframing</p>
+                                <p class="hashtag" id="hashtag-7" style="color:#FFFFFF">#figma</p>
+                                <p class="hashtag" id="hashtag-8" style="color:#FFFFFF">#Ux</p>
                             </div>
                         </div>
                         <p class="school-name" id="school-name-last" style="color:#FFFFFF">Coursera</p>
                     </div>
                     <div class="education" id="education-2">
-                        <div class="education-top-bar">
-                            <h2 id="education-date-3">2017</h2>
+                        <div class="education__top-bar">
+                            <h2 id="education__date-3">2017</h2>
                         </div>
-                        <div class="education-info">
-                            <h2 id="education-name-3">Graphic design</h2>
-                            <div class="education-tags">
-                                <p class="education-hashtag" id="hashtag-9">#branding</p>
-                                <p class="education-hashtag" id="hashtag-10">#web</p>
-                                <p class="education-hashtag" id="hashtag-11">#illustration</p>
-                                <p class="education-hashtag" id="hashtag-12">#adobe</p>
+                        <div class="education__info">
+                            <h2 id="education__name-3">Graphic design</h2>
+                            <div class="education__hashtags">
+                                <p class="hashtag" id="hashtag-9">#branding</p>
+                                <p class="hashtag" id="hashtag-10">#web</p>
+                                <p class="hashtag" id="hashtag-11">#illustration</p>
+                                <p class="hashtag" id="hashtag-12">#adobe</p>
                             </div>
                         </div>
                         <p class="school-name" id="school-name-2">Coursera</p>
                     </div>
                 </div>
-                <div class="education-column">
+                <div class="education__column">
                     <div class="education" id="education-1">
-                        <div class="education-top-bar">
-                            <h2 id="education-date-1">2017 - 2022</h2>
+                        <div class="education__top-bar">
+                            <h2 id="education__date-1">2017 - 2022</h2>
                         </div>
-                        <div class="education-info">
-                            <h2 id="education-name-1">Law</h2>
-                            <div class="education-tags">
-                                <p class="education-hashtag" id="hashtag-13">#law</p>
-                                <p class="education-hashtag" id="hashtag-14">#legalStudies</p>
-                                <p class="education-hashtag" id="hashtag-15">#contracts</p>
-                                <p class="education-hashtag" id="hashtag-16">#internationalLaws</p>
+                        <div class="education__info">
+                            <h2 id="education__name-1">Law</h2>
+                            <div class="education__hashtags">
+                                <p class="hashtag" id="hashtag-13">#law</p>
+                                <p class="hashtag" id="hashtag-14">#legalStudies</p>
+                                <p class="hashtag" id="hashtag-15">#contracts</p>
+                                <p class="hashtag" id="hashtag-16">#internationalLaws</p>
                             </div>
                         </div>
                         <p class="school-name" id="school-name-1">University of Kerala</p>
@@ -209,7 +210,7 @@
 
         <div class="column" style="gap: 20px">
             <div class="box" id="interest-box">
-                <h1 id="box-name-5">Interests</h1>
+                <h1 id="box__name-5">Interests</h1>
                 <div id="interests">
                     <p class="interest" id="interest-1">branding</p>
                     <p class="interest" id="interest-2">design</p>
@@ -226,10 +227,10 @@
 
             <div class="box" id="contact">
                 <div id="contact-title">
-                    <p id="contact-title-text">Let's chat! I'm ready to work on exciting project</p>
+                    <p id="contact-title__text">Let's chat! I'm ready to work on exciting project</p>
                 </div>
                 <div id="mail">
-                    <p id="mail-text">srkarthik.designscape@gmail.com</p>
+                    <p id="mail__text">srkarthik.designscape@gmail.com</p>
                 </div>
             </div>
         </div>

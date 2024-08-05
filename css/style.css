@@ -17,7 +17,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-#resume-container {
+#resume__container {
     max-width: 555px;
     display: flex;
     position: relative;
@@ -78,7 +78,7 @@
     gap: 10px;
 }
 
-.language-level{
+.language__level{
     flex-direction: row;
     justify-content: space-between;
     display: flex;
@@ -115,17 +115,17 @@
     gap: 8px;
 }
 
-.job-top-bar {
+.job__top-bar {
     display: flex;
     justify-content: space-between;
 }
 
-.job-content {
+.job__content {
     display: flex;
     gap: 8px;
 }
 
-.job-info {
+.job__info {
     width: 124px;
 }
 
@@ -174,13 +174,13 @@
     background-color: #F0F0F0;
 }
 
-#education-content {
+#education__content {
     display: flex;
     flex-direction: row;
     gap: 16px;
 }
 
-.education-column {
+.education__column {
     display: flex;
     flex-direction: column;
     max-width: 116px;
@@ -206,17 +206,17 @@
     background-size: cover;
 }
 
-.education-info {
+.education__info {
     display: flex;
     flex-direction: column;
 }
 
-.education-tags{
+.education__hashtags{
     display: flex;
     flex-wrap: wrap;
     gap: 2px;
 }
-.education-top-bar {
+.education__top-bar {
     display: flex;
     justify-content: space-between;
 }
